@@ -19,5 +19,5 @@ print(f"{nama} secara total menerima: Rp{total:,}" .replace(",", "."), "dalam", 
 # print(nama, "secara total menerima: Rp", total, "dalam", hari, "hari.")
 
 
-### ILMU BARU UNTUK (INT) AGAR BISA ADA TITIKNYA
+### ILMU BARU UNTUK (INT) AGAR BISA ADA TITIKNYA (f-string/format string)
 # print(f"{nama} secara total menerima: Rp{total:,}".replace(',', '.') + " dalam", hari, "hari.")
