@@ -22,7 +22,7 @@ syarat_uang = tabungan >= 3 * cicilan
 print(f"Apakah usia ({umur}th) memenuhi:  {syarat_umur}")
 print(f"Apakah gaji (Rp{gaji:,}) memenuhi:  {syarat_gaji}".replace(",","."))
 print(f"Apakah status rumah ({status}) memenuhi:  {syarat_rumah}")
-print(f"Syarat tabungan memenuhi:  {syarat_uang}")
+print(f"Syarat tabungan memenuhi (Rp{tabungan:,}):  {syarat_uang}".replace(",","."))
 
 print("---------------------------------------\n")
 
