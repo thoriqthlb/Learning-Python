@@ -24,6 +24,12 @@ umur_bulan_sisa = (umur_hari.days % 365) // 30
 print("\n"f"Hari ini tanggal\t: {hari_ini}")
 print(f"Umur Anda adalah\t: {umur_tahun} tahun {umur_bulan_sisa} bulan")
 
+# :%A (Hari)
+# :%d (Tanggal)
+# :%B (Bulan)
+# :%Y (Tahun)
+
+
 
 # hari_ini = dt.date.today()
 
