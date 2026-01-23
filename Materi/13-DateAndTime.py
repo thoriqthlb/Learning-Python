@@ -24,18 +24,40 @@ umur_bulan_sisa = (umur_hari.days % 365) // 30
 print("\n"f"Hari ini tanggal\t: {hari_ini}")
 print(f"Umur Anda adalah\t: {umur_tahun} tahun {umur_bulan_sisa} bulan")
 
+
+
+
+############### MATERI LENGKAP DI BAWAH ###############
+
+
+### NULIS PENANGGALAN
+d = dt.date(2026, 12, 12)
+print(d) #bisa tanggalnya doang/lainnya pake .date dll
+
+# nulis today
+tday = dt.date.today() #tambah .today()
+print(tday) #kalo mau salah satunya doang bisa ditambahin .year/day, dll
+
+tdelta = dt.timedelta(days = 7)
+print(tday - tdelta)
+
+# nyari birthday
+bday = dt.date(2026, 3, 4)
+till_bday = bday - tday
+print(bday)
+print(till_bday.days,"Hari") #tambahin .days dll buat khususin yang mau ditampilin
+
+
+### NULIS WAKTU
+t = dt.time(16, 3, 49)
+print(t) #bisa jamnya doang/lainnya pake .hours dll
+
+### BISA DUA-DUANYA
+dt = dt.datetime(2026, 1, 1, 9, 57, 38, 900000)
+print(dt) #bisa ditambahin untuk keduanya, misal .date() atau .time()
+
+
 # :%A (Hari)
 # :%d (Tanggal)
 # :%B (Bulan)
 # :%Y (Tahun)
-
-
-
-# hari_ini = dt.date.today()
-
-# print(hari_ini)
-# print(f"Hari ini adalah hari = {hari_ini:%A}")
-
-# tanggal = dt.date(2055,12,29)
-# print(tanggal)
-# print(f"Hari ini adalah hari = {tanggal:%A}")
