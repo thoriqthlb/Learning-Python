@@ -1,35 +1,35 @@
-# # 1. PASSWORD (easy)
+# 1. PASSWORD (easy)
 
-# pasw = input("Masukkan password: ")
+pasw = input("Masukkan password: ")
 
-# if pasw == "kopi":
-#     print("Oke, masuk.")
-# else: print("Password salah!")
+if pasw == "kopi":
+    print("Oke, masuk.")
+else: print("Password salah!")
 
-# # 2. SISTEM TILANG (med-easy)
+# 2. SISTEM TILANG (med-easy)
 
-# velo = int(input("Masukkan kecepatan (km/h): "))
+velo = int(input("Masukkan kecepatan (km/h): "))
 
-# if velo > 60:
-#     denda = (velo - 60) * 10000
-#     print(f"Anda didenda sebesar: Rp{denda:,}".replace(",","."))
-# else: print("Selamat jalan, tetap hati-hati!")
+if velo > 60:
+    denda = (velo - 60) * 10000
+    print(f"Anda didenda sebesar: Rp{denda:,}".replace(",","."))
+else: print("Selamat jalan, tetap hati-hati!")
 
-# # 3. DISKON SEDERHANA (med)
+# 3. DISKON SEDERHANA (med)
 
-# beli = int(input("Jumlah beli berapa: "))
-# martabak = 30000
-# total = beli * martabak
+beli = int(input("Jumlah beli berapa: "))
+martabak = 30000
+total = beli * martabak
 
-# if beli >= 3:
-#     diskon = total * 10/100
-# else: diskon = 0
+if beli >= 3:
+    diskon = total * 10/100
+else: diskon = 0
 
-# harga = total - diskon
+harga = total - diskon
 
-# print(f"""Harga awal = {total}
-# Potongan: {diskon}
-# Total: {harga}""")
+print(f"""Harga awal = {total}
+Potongan: {diskon}
+Total: {harga}""")
 
 # 4. MEMILIH MAKANAN (med)
 
