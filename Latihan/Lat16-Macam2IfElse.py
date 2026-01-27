@@ -6,7 +6,23 @@ if pasw == "kopi":
     print("Oke, masuk.")
 else: print("Password salah!")
 
-# 2. SISTEM TILANG (med-easy)
+# 2. SISTEM LOGIN (easy)
+
+print(15*"=", "SISTEM LOGIN", 15*"=")
+
+usern = "thoriq.thlb"
+pasw = "sukses2026"
+
+username = input("Masukkan username: ")
+
+if username == usern:
+    pas = input("Masukkan password: ")
+    if pas == pasw:
+        print("Selamat Datang, Thoriq! Akses Diberikan.")
+    else: print("Password salah, coba lagi!")
+else: print("Username tidak ditemukan!")
+
+# 3. SISTEM TILANG (med-easy)
 
 velo = int(input("Masukkan kecepatan (km/h): "))
 
@@ -15,7 +31,7 @@ if velo > 60:
     print(f"Anda didenda sebesar: Rp{denda:,}".replace(",","."))
 else: print("Selamat jalan, tetap hati-hati!")
 
-# 3. DISKON SEDERHANA (med)
+# 4. DISKON SEDERHANA (med)
 
 beli = int(input("Jumlah beli berapa: "))
 martabak = 30000
@@ -31,7 +47,7 @@ print(f"""Harga awal = {total}
 Potongan: {diskon}
 Total: {harga}""")
 
-# 4. MEMILIH MAKANAN (med)
+# 5. MEMILIH MAKANAN (med)
 
 nasgor = 15000
 beli = int(input("Beli berapa?: "))
