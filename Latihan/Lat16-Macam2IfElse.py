@@ -61,3 +61,15 @@ if ati == "y":
     total = total + 5000 * beli
 
 print(f"TOTAL BAYAR: Rp{total:,}".replace(",","."))
+
+# 6. SELEKSI BEASISWA (med)
+
+ipk = float(input("Masukkan IPK Anda: "))
+gaji = int(input("Masukkan pendapatan orang tua: "))
+kip = input("Punya KIP? (y/n): ")
+
+if ipk >= 3.5 and (gaji < 5000000 or kip == "y"):
+    hasil = "Anda Lolos Ke Tahap Berikutnya."
+else: hasil = "Mohon Maaf, Anda Tidak Memenuhi Syarat."
+
+print(f"\nHasil Seleksi: {hasil}")
