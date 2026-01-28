@@ -2,7 +2,7 @@
 #   aksi ini
 #   aksi itu
 
-# Akhir dari program
+# Bisa dipakai untuk kasus yang tidak tau kapan selesainya (sampai benar)
 
 angka = 0
 print(f"Angka sekarang => {angka} ")
