@@ -66,3 +66,19 @@ while ucap != "berhenti":
     print(ucap)
     ucap = input("Katakan sesuatu:")
 print("Oke.")
+
+# 8. Latihan loop while tanpa perintah break
+tanya = "ya"
+while tanya == "ya":
+    udin = input("Apakah kamu udin?: ")
+    if udin == "ya":
+        angka = int(input("7 x 8 berapa din?: "))
+        if angka == 56:
+            print("Oke lu pinter din.")
+        selesai = input("Udahan?: ")
+        if selesai == "ya":
+            tanya = "stop"
+    else: 
+        print("Bukan Udin? Oke bye.")
+        tanya = "stop" # matikan loop
+print("Oke, makasih din")
