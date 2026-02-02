@@ -57,3 +57,24 @@ for angka in range(2,51):
       break
   if prima == True: 
       print(f"Angka {angka} adalah bilangan prima.")
+
+# 5. Tes loop list string
+
+isi_tas = ["Baju", "Laptop", "Bom", "Buku"]
+barang_terlarang = ["Bom", "Senjata", "Narkoba"]
+status_aman = True
+
+print("\nMulai memeriksa tas...\n")
+
+for barang in isi_tas:
+    print(f"Mengecek: {barang}")
+    if barang in barang_terlarang:
+        print("\n>>> STOP! ADA BARANG HARAM!")
+        status_aman = False
+        break
+
+print(27 * "-")
+if status_aman == True:
+    print("KESIMPULAN: Tas Aman. Silakan masuk.")
+else:
+    print("KESIMPULAN: TANGKAP ORANG INI!")
