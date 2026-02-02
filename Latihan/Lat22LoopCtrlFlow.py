@@ -41,3 +41,19 @@ for cek in botol:
 
 print("""\nSelesai.
 --------""")
+
+# 4. Bilangan prima
+
+print(10*"=", "Bilangan Prima 2-50", 10*"=" + "\n")
+
+print("Daftar Bilangan Prima 2-50: ")
+
+for angka in range(2,51):
+  prima = True
+   
+  for pembagi in range(2,angka):
+    if angka % pembagi == 0:
+      prima = False
+      break
+  if prima == True: 
+      print(f"Angka {angka} adalah bilangan prima.")
