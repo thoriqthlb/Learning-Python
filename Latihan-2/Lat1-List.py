@@ -3,8 +3,8 @@
 list_buku = []
 while True:
     print("Masukkan Data Buku")
-    judul = input("Judul Buku: ").capitalize()
-    penulis = input("Nama Penulis: ").capitalize()
+    judul = input("Judul Buku: ").title()
+    penulis = input("Nama Penulis: ").title()
 
     buku_baru = [judul,penulis]
     list_buku.append(buku_baru)
@@ -12,7 +12,7 @@ while True:
     for index,buku in enumerate(list_buku):
         print(f"{index+1} | {buku[0]} | {buku[1]}")
 
-    lanjut = input("Lanjut? (y/n): ").lower()
+    lanjut = input("Lanjut? (ketik 'n' jika ingin stop): ").lower()
 
     if lanjut == "n":
         break
