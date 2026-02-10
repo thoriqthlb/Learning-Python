@@ -16,11 +16,14 @@ for nama in nama_nama:
 keys = nama_nama.keys()
 print(keys)
 
-for key in nama_nama.keys():
+for key in keys:
     print(nama_nama.get(key))
 
 values = nama_nama.values()
 print(values)
 
-for value in nama_nama.values():
+for value in values:
     print(value)
+
+for key,value in nama_nama.items():
+    print(key, "=", value)
