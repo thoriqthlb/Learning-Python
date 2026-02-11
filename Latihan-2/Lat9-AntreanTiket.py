@@ -15,18 +15,18 @@ while True:
     print(f"""\n=== MENU IT SUPPORT ===
 1. Tambah Tiket Baru
 2. Lihat Semua Tiket
-3. Ubah Status tiket          
-4. Keluar                   
+3. Ubah Status tiket
+4. Hapus Tiket    
+5. Keluar                   
 """)
     
-    pilihan = (input("Pilih menu (1-4): "))
+    pilihan = (input("Pilih menu (1-5): "))
 
     if pilihan == "1":
         # Tambahan dari input user 
         print("\n=== INPUT TIKET BARU ===")
         nama = input("Masukkan nama: ").title()
         kendala = input("Sebutkan kendalanya: ").title()
-        status = input("Status saat ini (tiket baru ketik 'open'): ").title()
 
         # Membuat urutan nomor selanjutnya dari nomor paling terakhir
         nomor_terakhir = antrean_tiket[-1]["no"]
@@ -37,7 +37,7 @@ while True:
             "no": nomor_baru, 
             "user": nama, 
             "kendala": kendala,
-            "status": status
+            "status": "Open"
         }
 
         # Tambah dictionary yang baru dibuat ke list
@@ -57,15 +57,29 @@ while True:
         for tiket in antrean_tiket:
             if tiket["no"] == cek:
                 ketemu = True
-                print("Status berhasil diubah!")
                 tiket["status"] = "Selesai"
+                print(f"Tiket milik {tiket['user']} telah selesai!")
                 break
         if not ketemu:
             print("Data tidak ditemukan.")
-        
 
     elif pilihan == "4":
-        print("Sistem dimatikan. Bye!")
+        hapus = int(input("Masukkan nomor tiket yang ingin dihapus: "))
+        ketemu = False
+
+        for i,tiket in enumerate(antrean_tiket):
+            if tiket["no"] == hapus:
+                ketemu = True
+                yakin = input(f"Yakin hapus tiket milik {tiket['user']}? (y/n): ")
+                if yakin.lower() == 'y':
+                    antrean_tiket.pop(i)
+                    print("Tiket dihapus!")
+                else:
+                    print("Hapus dibatalkan.")
+                break
+
+    elif pilihan == "5":
+        print("Sistem dimatikan. Sampai jumpa!")
         break
 
     else: 
