@@ -1,4 +1,5 @@
 import datetime as dt
+import os
 
 mahasiswa_1 = {
     "nama":"Rizki",
@@ -29,7 +30,7 @@ data_mahasiswa = {
     "MAH002":mahasiswa_2,
     "MAH003":mahasiswa_3
 }
-
+os.system("cls")
 print(f"{'KEY':<6}| {'NAMA':<17}| {'NIM':<10}| {'SKS':<4}| {'BEASISWA':<10}| {'TTL':<10}")
 print(60*"-")
 
