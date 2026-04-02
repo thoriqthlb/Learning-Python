@@ -78,3 +78,29 @@ if status_aman == True:
     print("KESIMPULAN: Tas Aman. Silakan masuk.")
 else:
     print("KESIMPULAN: TANGKAP ORANG INI!")
+
+# 6 Cek Bahan Alergi (Logika Flagging)
+
+bahan_nasi_goreng = ["nasi", "telur", "kecap", "kacang", "bawang"]
+alergi = "kacang"
+
+# 1. Awalnya kita optimis resep ini aman
+status_aman = True
+
+# 2. Cek satu per satu
+for bahan in bahan_nasi_goreng:
+    
+    # 3. Jika ketemu bahan yang bikin alergi...
+    if bahan == alergi:
+        
+        # 4. Ubah status jadi TIDAK AMAN
+        status_aman = False
+        
+        # 5. Tarik Rem Darurat agar loop langsung berhenti tanpa mengecek 'bawang'
+        break
+
+# Kesimpulan akhir
+if status_aman == True:
+    print("Aman dimakan!")
+else:
+    print("\nAWAS BAHAYA!\n")
