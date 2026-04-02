@@ -34,3 +34,18 @@ print("<--------------------------------------->\n")
 keputusan = dimensi and berat and powerbank_aman and cairan_aman
 print("Status Bagasi:", keputusan)
 print("=======================================")
+
+# Tambahan Latihan Logika Pengecekan X-ray di Bagasi
+
+tas = ["buku", "baju", "gunting", "kacamata"]
+lolos_sensor = True
+
+for barang in tas:
+    if barang == "gunting":
+        lolos_sensor = False
+        print("\nALARM: Benda tajam!")
+        break
+    print("\nCek:", barang)
+
+if lolos_sensor == False:
+    print("\nTahan penumpang!\n")
