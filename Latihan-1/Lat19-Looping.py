@@ -82,3 +82,12 @@ while tanya == "ya":
         print("Bukan Udin? Oke bye.")
         tanya = "stop" # matikan loop
 print("Oke, makasih din")
+
+# 9. Test nested loop
+bintang = "*"
+n = 6
+
+for i in range(n):
+    for j in range(i+1):
+        print(bintang, end="")
+    print()
