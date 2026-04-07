@@ -44,8 +44,31 @@ nama_nama = {
 
 for value in nama_nama.values():
     if "i" in value:
-        print(f"Nama yang mengandung huruf 'i' adlaah {value}")
+        print(f"Nama yang mengandung huruf 'i' adalah {value}")
 
 # lebih rapi
 hasil = [nama for nama in nama_nama.values() if "i" in nama.lower()]
 print(hasil)
+
+
+# Latihan Dictionary Lagi
+skor = {"Andi": 120, "Budi": 145, "Cici": 130}
+
+# 1. Jadikan Andi sebagai patokan Juara Sementara
+nama_juara = "Andi"
+nilai_juara = skor["Andi"]  # Ini nilainya 120
+
+# 2. Cek satu per satu nama di dalam buku catatan
+for nama in skor:
+    
+    # 3. Ambil angka milik si 'nama' yang sedang dicek saat ini
+    nilai_sekarang = skor[nama]
+    
+    # 4. Jika nilai orang ini LEBIH BESAR dari nilai_juara saat ini...
+    if nilai_sekarang > nilai_juara:
+        
+        # 5. Ganti nama_juara dan nilai_juara dengan yang baru!
+        nama_juara = nama
+        nilai_juara = nilai_sekarang
+
+print("Lompatan tertinggi dilakukan oleh:", nama_juara)
