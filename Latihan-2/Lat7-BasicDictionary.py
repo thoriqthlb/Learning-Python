@@ -93,3 +93,26 @@ for nama in pelamar:
         daftar_lulus.append(nama)
 
 print("Pelamar yang lolos:", daftar_lulus)
+
+
+# Mengubah Isi List Menjadi Dict
+suara = ["Budi", "Siti", "Budi", "Andi", "Siti", "Budi"]
+
+# 1. Siapkan papan tulis kosong (Dictionary)
+rekap = {}
+
+# 2. Buka gulungan kertas satu per satu
+for nama in suara:
+    
+    # 3. Cek papan tulis: Apakah nama ini SUDAH ADA di dalam dictionary rekap?
+    if nama in rekap:
+        
+        # 4. Jika SUDAH ADA, tambahkan angka milik nama tersebut dengan 1
+        rekap[nama] += 1
+        
+    else:
+        
+        # 5. Jika BELUM ADA, buat nama tersebut di papan dan beri nilai perdana 1
+        rekap[nama] = 1
+
+print("Hasil rekapitulasi:", rekap)
