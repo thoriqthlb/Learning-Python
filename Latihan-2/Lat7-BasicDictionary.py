@@ -72,3 +72,24 @@ for nama in skor:
         nilai_juara = nilai_sekarang
 
 print("Lompatan tertinggi dilakukan oleh:", nama_juara)
+
+
+# Lanjutan Latihan Dictionary
+pelamar = {"Dina": 80, "Eko": 70, "Fina": 90, "Gani": 65}
+
+# 1. Siapkan daftar kosong untuk menampung nama yang lulus
+daftar_lulus = []
+
+# 2. Cek satu per satu pelamar
+for nama in pelamar:
+    
+    # 3. Ambil nilainya
+    nilai = pelamar[nama]
+    
+    # 4. Jika nilainya LEBIH BESAR dari 75...
+    if nilai > 75:
+        
+        # 5. Masukkan 'nama' tersebut ke dalam list daftar_lulus
+        daftar_lulus.append(nama)
+
+print("Pelamar yang lolos:", daftar_lulus)
