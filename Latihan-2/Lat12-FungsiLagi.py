@@ -22,3 +22,14 @@ def cetak_struk(nama):
 cetak_struk("Udin")
 print("\n--- Jeda 5 menit ---\n")
 cetak_struk("Rizky")
+
+
+# 3. Menggunakan Return Untuk Data Yang Perlu Diolah
+def hitung_kembalian(total_belanja, uang_bayar):
+    selisih = uang_bayar - total_belanja
+
+    return selisih
+
+kembalian_budi = hitung_kembalian(100000, 120000)
+
+print(f"Kembalian Anda: {kembalian_budi}")
