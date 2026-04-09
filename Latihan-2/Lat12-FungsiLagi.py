@@ -47,3 +47,14 @@ n_Rizky, h_Rizky, s_Rizky = hitung_tiket("Rizky", 70000)
 
 print(f"Total belanja atas nama {n_Hilmy} dengan status {s_Hilmy}: Rp{h_Hilmy}")
 print(f"Total belanja atas nama {n_Rizky} dengan status {s_Rizky}: Rp{h_Rizky}")
+
+
+# 5. Menggunakan *Args 1
+def cetak_struk(kasir, *pesanan):
+    print(f"\nKasir yang melayani: {kasir}")
+    print("\nDaftar Pesanan: ")
+
+    for item in pesanan:
+        print(item)
+
+pesanan_1 = cetak_struk("Hilmy", "buah", "sayur", "daging", "susu")
