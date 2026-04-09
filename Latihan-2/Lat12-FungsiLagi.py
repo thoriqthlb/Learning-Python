@@ -71,3 +71,13 @@ def hitung_skor_lomba(nama_peserta, *skor_juri):
 
 p_reki, s_reki = hitung_skor_lomba("Reki", 100, 90, 89, 100, 88, 96)
 print(f"Peserta atas nama {p_reki} mendapatkan total skor: {s_reki}!")
+
+
+# 6. Menggunakan **Kwargs
+def buat_profil(nama, **data_diri):
+    print(f"===== Profil {nama} =====")
+
+    for label, isi in data_diri.items():
+        print(f"{label}: {isi}")
+
+buat_profil("Rizky", gender="pria", kota="Bandung", profesi="Mahasiswa" )
