@@ -65,3 +65,27 @@ else: print("\n> STATUS: Aman! Anda tidak kena tilang.")
 print(42*"-")
 
 
+# 4. Sistem Bonus Reporter
+def hitung_bonus(jumlah_berita):
+    bonus = 0
+
+    if jumlah_berita > 20:
+        bonus = 100000 * (jumlah_berita - 10) 
+    elif jumlah_berita > 10:
+        bonus = 50000 * (jumlah_berita - 10)
+    
+    return bonus
+
+print(5*'-', "SISTEM BONUS REPORTER", 5*'-')
+
+# input
+beritamu = int(input("Berapa jumlah berita bulan ini? (min. 10): "))
+
+# hasil dari fungsi
+bonus_didapat = hitung_bonus(beritamu)
+
+if bonus_didapat > 0: # selalu pakai hasil dari fungsi bukan input, jadi kalo butuh perubahan yang diubah fungsi bukan program utamanya.
+    print(f"\nSELAMAT! ANDA MENDAPATKAN BONUS Rp{bonus_didapat:,}!".replace(",","."))
+else: print(f"\nANDA TIDAK MENDAPATKAN BONUS BULAN INI, TETAP SEMANGAT!")
+
+print(42*"-")
