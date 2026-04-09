@@ -36,3 +36,32 @@ total_biaya = hitung_ongkir(jarak_pengiriman, jenis_layanan)
 
 print(f"\n> Total biaya ongkir Anda adalah: Rp{total_biaya:,}".replace(",","."))
 print(30*"-")
+
+
+# 3. Sistem Tilang Elektronik
+def hitung_denda(kecepatan_mobil, batas_jalan):
+    selisih = kecepatan_mobil - batas_jalan
+    denda = 0
+
+    if selisih > 20:
+        denda = 500000
+    elif selisih > 0:
+        denda = 250000
+    return denda
+
+max_kec = 100
+
+print(5*'-', "Kamera ETLE", 5*'-')
+print(f"Batas kecepatan jalan (km/jam): {max_kec}")
+
+kecepatan_anda = int(input("Kecepatan Mobil Anda: "))
+
+biaya_tilang = hitung_denda(kecepatan_anda, max_kec)
+
+if biaya_tilang > 0:
+    print(f"\n> STATUS: DITILANG! Denda Anda: Rp{biaya_tilang:,}".replace(",", "."))
+else: print("\n> STATUS: Aman! Anda tidak kena tilang.")
+
+print(42*"-")
+
+
