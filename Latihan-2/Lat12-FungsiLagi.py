@@ -33,3 +33,17 @@ def hitung_kembalian(nama, total_belanja, uang_bayar):
 nama, kembalian = hitung_kembalian("Udin", 100000, 120000)
 
 print(f"Kembalian Anda atas nama {nama}: {kembalian}")
+
+
+# 4. Menggunakan Return dan Default Parameter
+def hitung_tiket(nama, harga_dasar, status="reguler"):
+    if status == "member":
+        harga_dasar -= 10000
+    
+    return nama, harga_dasar, status
+
+n_Hilmy, h_Hilmy, s_Hilmy = hitung_tiket("Hilmy", 45000, "member")
+n_Rizky, h_Rizky, s_Rizky = hitung_tiket("Rizky", 70000)
+
+print(f"Total belanja atas nama {n_Hilmy} dengan status {s_Hilmy}: Rp{h_Hilmy}")
+print(f"Total belanja atas nama {n_Rizky} dengan status {s_Rizky}: Rp{h_Rizky}")
