@@ -58,3 +58,16 @@ def cetak_struk(kasir, *pesanan):
         print(item)
 
 pesanan_1 = cetak_struk("Hilmy", "buah", "sayur", "daging", "susu")
+
+
+# 6. Menggunakan *Args 2
+def hitung_skor_lomba(nama_peserta, *skor_juri):
+    
+    total = 0
+    for skor in skor_juri:
+        total += skor
+
+    return nama_peserta, total
+
+p_reki, s_reki = hitung_skor_lomba("Reki", 100, 90, 89, 100, 88, 96)
+print(f"Peserta atas nama {p_reki} mendapatkan total skor: {s_reki}!")
