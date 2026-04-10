@@ -154,3 +154,39 @@ print(f">> BATTLE LOG: {hasil['status']}")
 print(f">> MONSTER MENERIMA {hasil['skor']} DAMAGE!!!\n")
 
 print(42*"-")
+
+
+# 6. Mesin Auto-Triage Keluhan
+def buat_tiket(nama_pelapor, teks_keluhan):
+    id_tiket = f"TKT-{nama_pelapor.upper()}-{len(teks_keluhan)}"
+
+    keluhan_lower = teks_keluhan.lower()
+
+    if "mati" in keluhan_lower or "bocor" in keluhan_lower or "meledak" in keluhan_lower:
+        prioritas = "KRITIS"
+        target = "1 jam"
+    
+    elif "lupa" in keluhan_lower or "lambat" in keluhan_lower or "error" in keluhan_lower:
+        prioritas = "SEDANG"
+        target = "24 jam"
+
+    else: 
+        prioritas = "RENDAH"
+        target = "3 hari"
+
+    return {"tiket":id_tiket, "urgen":prioritas, "target_selesai":target}
+
+print(5*'-', "TIKET ADUAN", 5*'-')
+
+nama = input("Masukkan nama: ")
+keluhan = input("Masukkan keluhannya: ")
+
+print("\n>> TIKET BERHASIL DIBUAT <<")
+
+hasil = buat_tiket(nama, keluhan)
+
+print(f"\nID TIKET: {hasil['tiket']}")
+print(f"Prioritas: {hasil['urgen']}")
+print(f"Target: {hasil['target_selesai']}\n")
+
+print(42*"-")
