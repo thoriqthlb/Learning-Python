@@ -89,3 +89,68 @@ if bonus_didapat > 0: # selalu pakai hasil dari fungsi bukan input, jadi kalo bu
 else: print(f"\nANDA TIDAK MENDAPATKAN BONUS BULAN INI, TETAP SEMANGAT!")
 
 print(42*"-")
+
+
+# 5. RPG Battle Engine (Elemental Mastery)
+def damage_monster(base_power, hero_el, monster_el):
+    '''Logika damage yang diberikan hero ke monster'''
+
+    damage = 0
+
+    # api
+    if hero_el.lower() == "api" and monster_el.lower() == "daun":
+        damage = base_power * 2
+        status_menang = "SUPER EFFECTIVE!"
+    
+    elif hero_el.lower() == "api" and monster_el.lower() == "air":
+        damage = base_power // 2
+        status_menang = "RESISTED!"
+    
+    elif hero_el.lower() == "api" and monster_el.lower() == "api":
+        damage = base_power
+        status_menang = "NORMAL!"
+    
+    # daun
+    elif hero_el.lower() == "daun" and monster_el.lower() == "air":
+        damage = base_power * 2
+        status_menang = "SUPER EFFECTIVE!"
+    
+    elif hero_el.lower() == "daun" and monster_el.lower() == "api":
+        damage = base_power // 2
+        status_menang = "RESISTED!"
+    
+    elif hero_el.lower() == "daun" and monster_el.lower() == "daun":
+        damage = base_power
+        status_menang = "NORMAL!"
+    
+    # air
+    elif hero_el.lower() == "air" and monster_el.lower() == "api":
+        damage = base_power * 2
+        status_menang = "SUPER EFFECTIVE!"
+    
+    elif hero_el.lower() == "air" and monster_el.lower() == "daun":
+        damage = base_power // 2
+        status_menang = "RESISTED!"
+    
+    elif hero_el.lower() == "air" and monster_el.lower() == "air":
+        damage = base_power
+        status_menang = "NORMAL!"
+
+    return {"skor":damage, "status":status_menang}
+
+skor_hero = int(input("Masukkan skor kekuatan hero: "))
+elemen_hero = input("Masukkan elemen kekuatan hero: ")
+elemen_monster = input("Masukkan elemen kekuatan monster: ")
+
+print(5*'-', "BATLE ARENA", 5*'-')
+
+print(f"\nPower Hero: {skor_hero}")
+print(f"Elemen Hero: {elemen_hero}")
+print(f"Elemen Monster: {elemen_monster}")
+
+hasil = damage_monster(skor_hero, elemen_hero, elemen_monster)
+
+print(f">> BATTLE LOG: {hasil['status']}")
+print(f">> MONSTER MENERIMA {hasil['skor']} DAMAGE!!!\n")
+
+print(42*"-")
