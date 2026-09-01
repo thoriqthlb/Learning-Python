@@ -1,0 +1,5 @@
+[2026-09-01 09:00:01] INFO - Pembayaran sukses dari ID: 1001 - Rp 50.000
+[2026-09-01 09:15:22] INFO - Pembayaran sukses dari ID: 1002 - Rp 120.000
+[2026-09-01 09:30:10] INFO - Pembayaran sukses dari ID: 1003 - Rp 35.000
+[2026-09-01 10:22:40] ERROR - Gagal memproses pembayaran ID: 1004 - Koneksi Bank Terputus
+[2026-09-01 10:25:11] INFO - Pembayaran sukses dari ID: 1005 - Rp 250.000
